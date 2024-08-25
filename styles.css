@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
     box-sizing: border-box;
-    margin: 0;
 }
 
 .card {
@@ -26,12 +26,12 @@ body {
 }
 
 input[type="number"] {
-    width: 100%; /* Ensure full width on mobile */
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 16px; /* Adjust font size for mobile readability */
+    font-size: 16px;
 }
 
 button {
@@ -41,15 +41,15 @@ button {
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%; /* Ensure full width on mobile */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect */
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
     transition: box-shadow 0.3s ease;
-    font-size: 16px; /* Adjust font size for mobile readability */
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #0056b3;
-    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7); /* Increased glow on hover */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
 }
 
 #result {
@@ -73,10 +73,14 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Add media queries for even better mobile support */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     .card {
         padding: 15px;
+        max-width: 100%;
     }
 
     input[type="number"], button {
@@ -86,5 +90,32 @@ button:hover {
 
     #result {
         font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    input[type="number"], button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #result {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
     }
 }
