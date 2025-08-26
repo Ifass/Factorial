@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000;
+    background-color: #708090;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -119,4 +119,5 @@ button:hover {
         padding: 10px;
     }
 }
+
 
